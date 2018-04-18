@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
     $("select").change(function () {
             var str = "";
             $("select option:selected").each(function () {
@@ -19,7 +18,7 @@ $(document).ready(function () {
                     var img = json.data[i];
                     var imgElem = $('<img>')
                         .attr('src', img.images.downsized.url);
-                    $('#gifs').append(imgElem);
+                    $('#gifs' ).append(imgElem);
                    console.log(img);
                 }
             });
