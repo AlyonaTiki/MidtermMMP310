@@ -5,7 +5,8 @@ $(document).ready(function () {
             $("select option:selected").each(function () {
                 str += $(this).text();
             });
-            var query = str;
+        console.log(str);
+            var query = this.value;
             var key = "kAv1sgh2zjMEG6nofwfLcu5pA55n4LEO";
             var url = "http://api.giphy.com/v1/gifs/search?q=" +
                 query +
@@ -15,11 +16,11 @@ $(document).ready(function () {
 //            console.log(url);
             $.getJSON(url, function (json) {
                 for (let i = 0; i < json.data.length; i++) {
-                    const img = json.data[i];
-                    const imgElem = $('<img>')
+                    var img = json.data[i];
+                    var imgElem = $('<img>')
                         .attr('src', img.images.downsized.url);
                     $('#gifs').append(imgElem);
-//                    console.log(img);
+                   console.log(img);
                 }
             });
         })
