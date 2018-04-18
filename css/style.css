@@ -37,3 +37,17 @@ max-width: 80%;
 #1, #2, #3, #4{
 font-family: 
 }
+
+p {
+font-family:"Tajawal", sans-serif;
+font-size: 1.2em;
+}
+
+h1{
+font-family: 'Cabin Sketch', cursive;
+    FONT-SIZE: 2.7em;
+}
+#gif1, #gif2, #gif3, #gif4{
+width: 80px;
+height: 80px;
+}
