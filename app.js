@@ -37,3 +37,45 @@ $(document).ready(function () {
 //var node = document.createTextNode("This is a new paragraph." + g1);
 //    
 //	document.body.appendChild(message);
+
+
+
+
+
+
+//audio section
+
+$(document).ready(function() {
+    var audioElement = document.createElement('audio');
+    audioElement.setAttribute('src', 'audio/Elevatormusic.mp3');
+    
+    audioElement.addEventListener('ended', function() {
+        this.play();
+    }, false);
+    
+    //display time and track inforamtion
+    audioElement.addEventListener("canplay",function(){
+        $("#length").text("Duration:" + audioElement.duration + " seconds");
+        $("#source").text("Source:" + audioElement.src);
+        $("#status").text("Status: Ready to play").css("color","green");
+    });
+    //time update for the current duration of the track
+    audioElement.addEventListener("timeupdate",function(){
+        $("#currentTime").text("Current second:" + audioElement.currentTime);
+    });
+    //play button if clicked display status to play
+    $('#play').click(function() {
+        audioElement.play();
+        $("#status").text("Status: Playing");
+    });
+    //update if pause button is clicked update status to paused
+    $('#pause').click(function() {
+        audioElement.pause();
+        $("#status").text("Status: Paused");
+    });
+    //update if clicked restart button track starts back at "0"
+    $('#restart').click(function() {
+        audioElement.currentTime = 0;
+    });
+});
+//end of audio section
