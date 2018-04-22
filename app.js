@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+    //getting option from dropdown list
+    
     $("select").change(function () {
             var str = "";
             const num = this.id;
@@ -39,10 +41,6 @@ $(document).ready(function () {
 //	document.body.appendChild(message);
 
 
-
-
-
-
 //audio section
 
 $(document).ready(function() {
@@ -55,9 +53,9 @@ $(document).ready(function() {
     
     //display time and track inforamtion
     audioElement.addEventListener("canplay",function(){
-        $("#length").text("Duration:" + audioElement.duration + " seconds");
-        $("#source").text("Source:" + audioElement.src);
-        $("#status").text("Status: Ready to play").css("color","green");
+        //$("#length").text("Duration:" + audioElement.duration + " seconds");
+       // $("#source").text("Source:" + audioElement.src);
+       // $("#status").text("Status: Ready to play").css("color","green");
     });
     //time update for the current duration of the track
     audioElement.addEventListener("timeupdate",function(){
@@ -66,7 +64,7 @@ $(document).ready(function() {
     //play button if clicked display status to play
     $('#play').click(function() {
         audioElement.play();
-        $("#status").text("Status: Playing");
+        //$("#status").text("Status: Playing");
     });
     //update if pause button is clicked update status to paused
     $('#pause').click(function() {

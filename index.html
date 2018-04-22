@@ -4,42 +4,17 @@
 <head>
     <title>Midterm</title>
     <link rel="stylesheet" href="css/style.css" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Tajawal" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Tajawal" rel="stylesheet">
     <meta charset="utf-8">
 </head>
 
 <body>
     <div id="wrapper">
-
-<!--Audio start-->
-    
-<h2>Sound Information</h2>
-    <div id="length">Duration:</div>
-    <div id="source">Source:</div>
-    <div id="status" style="color:red;">Status: Loading</div>
-    <hr>
-<h2>Audio Options</h2>
-    <button id="play">Play</button>
-    <button id="pause">Pause</button>
-    <button id="restart">Restart</button>
-    <hr>
-<h2>Player:Current Time</h2>
-    <div id="currentTime">0</div>
-    <br>
-    <br>
-<!--End of audio section-->
-        <!--
-        <select name="Reactions" id="4">
-    <option ></option> 
-    <option >LOL</option>
-    <option >Facepalm</option>
-    <option >Nom</option>
-    <option >Pleased</option>
-  </select>
-        
--->
         <h1> Welcome to the interactive madlibs</h1>
-
+        <h4> You can fill out this text with gifs and music. 
+            <br>&#10004 choose option from dropdown list to add a gif <br> &#10004 press music sign to strat playing music
+        </h4>
+        <h2> Enjoy! &#9787</h2>
         <p>I woke up this morning with a feeling of...</p>
         <select name="Emotions" id="3">
     <option ></option>  
@@ -58,7 +33,40 @@
     <option >Pie</option>
    </select>
         <div id="gif2"></div>
-        <p>and left my home, So, I was walking across the street. The weather was as usual, although clouds forming a animal-shaped. I took a look in the sky, then continued walking. I saw a </p>
+        <p>and left my home, So, I was walking across the street. The weather was as usual. I turn on music on my cell phone
+            <!--Audio start-->
+            <!--
+    
+<h2>Sound Information</h2>
+    <div id="length">Duration:</div>
+    <div id="source">Source:</div>
+    <div id="status" style="color:red;">Status: Loading</div>
+    <hr>
+-->
+            <!--<h2>Audio Options</h2>-->
+            <button id="play">&#9835</button>
+            <!--
+    <button id="pause">Pause</button>
+    <button id="restart">Restart</button>
+    <hr>
+-->
+            <!--
+<h2>Player:Current Time</h2>
+    <div id="currentTime">0</div>
+    <br>
+    <br>
+-->
+            <!--End of audio section-->
+            <!--
+        <select name="Reactions" id="4">
+    <option ></option> 
+    <option >LOL</option>
+    <option >Facepalm</option>
+    <option >Nom</option>
+    <option >Pleased</option>
+  </select>
+        
+-->I took a look in the sky to watch animal shaped clouds, then continued walking. I saw a </p>
         <select name="Animals" id="1">
     <option ></option> 
     <option >Panda</option>
@@ -68,7 +76,6 @@
    </select>
         <div id="gif1"></div>
         <p>He was very cute, and I decided to take him with me.</p>
-
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="app.js"></script>
