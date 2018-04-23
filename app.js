@@ -8,7 +8,7 @@ $(document).ready(function () {
             $("select option:selected").each(function () {});
             var query = this.value;
             var key = "kAv1sgh2zjMEG6nofwfLcu5pA55n4LEO";
-            var url = "http://api.giphy.com/v1/gifs/search?q=" +
+            var url = "https://api.giphy.com/v1/gifs/search?q=" +
                 query +
                 "&api_key=" +
                 key +
