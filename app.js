@@ -1,79 +1,48 @@
 $(document).ready(function () {
 
     //getting option from dropdown list
-    
+
     $("select").change(function () {
             var str = "";
             const num = this.id;
-            $("select option:selected").each(function () {
-                //str += "+" + $(this).text();
-            });
+            $("select option:selected").each(function () {});
             var query = this.value;
-            //str = str.substr(1, str.length);    
-            console.log(str);
-            //var query = str;
             var key = "kAv1sgh2zjMEG6nofwfLcu5pA55n4LEO";
             var url = "http://api.giphy.com/v1/gifs/search?q=" +
                 query +
                 "&api_key=" +
                 key +
                 "&limit=1";
-           console.log(url);
+            console.log(url);
             $.getJSON(url, function (json) {
-                console.log(json)
-                
                 for (let i = 0; i < json.data.length; i++) {
                     const img = json.data[i];
                     const imgElem = $('<img>')
                         .attr('src', img.images.downsized.url);
-                    $('#gif'+num).append(imgElem);
-                   
-//                    console.log(img);
+                    $('#gif' + num).append(imgElem);
                 }
             });
         })
         .trigger("change");
 });
-//const message = document.createElement("p");
-//const g1 = document.appendChild('#gif1')
-//var node = document.createTextNode("This is a new paragraph." + g1);
-//    
-//	document.body.appendChild(message);
 
+//audio 
 
-//audio section
-
-$(document).ready(function() {
+$(document).ready(function () {
     var audioElement = document.createElement('audio');
     audioElement.setAttribute('src', 'audio/Elevatormusic.mp3');
-    
-    audioElement.addEventListener('ended', function() {
-        this.play();
-    }, false);
-    
-    //display time and track inforamtion
-    audioElement.addEventListener("canplay",function(){
-        //$("#length").text("Duration:" + audioElement.duration + " seconds");
-       // $("#source").text("Source:" + audioElement.src);
-       // $("#status").text("Status: Ready to play").css("color","green");
-    });
-    //time update for the current duration of the track
-    audioElement.addEventListener("timeupdate",function(){
-        $("#currentTime").text("Current second:" + audioElement.currentTime);
-    });
-    //play button if clicked display status to play
-    $('#play').click(function() {
+    var audioElement2 = document.createElement('audio');
+    audioElement2.setAttribute('src', 'audio/song2.mp3');
+
+    //play button 
+    $('#play').click(function () {
         audioElement.play();
-        //$("#status").text("Status: Playing");
+
     });
-    //update if pause button is clicked update status to paused
-    $('#pause').click(function() {
+    //change button
+    $('#change').click(function () {
         audioElement.pause();
-        $("#status").text("Status: Paused");
-    });
-    //update if clicked restart button track starts back at "0"
-    $('#restart').click(function() {
-        audioElement.currentTime = 0;
+        audioElement2.play();
     });
 });
 //end of audio section
