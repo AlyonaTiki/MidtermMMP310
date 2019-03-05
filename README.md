@@ -1,5 +1,5 @@
 # Madlibs that allows to build story using audio and Gifs (GiphyAPI)
-# madlibs buld using JQuery and GiphyAPI
+# madlibs bult using JQuery and GiphyAPI
 date: May 2018
 Authors: Alyona Karmazin and cwong984
 Instructions: A user can fill out this madlibs story with gifs and music. 
